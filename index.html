@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio - Rafaella</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosa: #ff00cc;
+      --roxo: #3333ff;
+      --laranja: #ff6600;
+      --preto-transparente: rgba(0, 0, 0, 0.6);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, var(--rosa), var(--roxo), var(--laranja));
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: var(--preto-transparente);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      padding: 1.5rem 1rem 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      margin: 0.5rem 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--laranja);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 1rem;
+    }
+
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--preto-transparente);
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: var(--preto-transparente);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2 {
+      color: #ffffff;
+    }
+
+    h2 {
+      border-bottom: 2px solid white;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    a.link {
+      color: #ffccff;
+      text-decoration: underline;
+    }
+
+    a.link:hover {
+      color: #ffff99;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--preto-transparente);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfólio de Rafaella de Magalhães Ramos</h1>
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav>
+      <a href="#apresentacao">Apresentação</a>
+      <a href="#historico">Histórico</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#experiencias">Experiências</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="apresentacao">
+    <h2>Apresentação</h2>
+    <p>Olá, meu nome é Rafaella. Sou estudante do Ensino Médio e monitora de português, entre outras coisas.</p>
+  </section>
+
+  <section id="historico">
+    <h2>Histórico</h2>
+    <p><strong>Ensino Fundamental:</strong> Colégio Brasil Objetivo – Concluído</p>
+    <p><strong>Ensino Médio:</strong> E.E PEI Ibrahim Nobre – Finalizando</p>
+    <p><strong>Curso:</strong> Alura – Em andamento</p>
+  </section>
+
+  <section id="projetos">
+    <h2>Meus Projetos</h2>
+    <ul>
+      <li><a class="link" href="https://3c-rafar-in.github.io/alurabooks-pc/" target="_blank">Site de Livros</a></li>
+      <li><a class="link" href="https://3c-rafar-in.github.io/alurabooks-celular/" target="_blank">AluraBooks Celular</a></li>
+      <li><a class="link" href="https://3c-rafar-in.github.io/alurabooks-pc/" target="_blank">Site de Filmes</a></li>
+    </ul>
+  </section>
+
+  <section id="experiencias">
+    <h2>Experiências</h2>
+    <ul>
+      <li>Dou aulas e monitorias de língua portuguesa</li>
+      <li>Monitora de português</li>
+      <li>Atendente na Pizzaria Nova Castelo</li>
+      <li>Gerenciadora de planilhas e controle financeiro</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p><strong>GitHub:</strong> <a class="link" href="https://github.com/3C-RafaR-IN" target="_blank">github.com/3C-RafaR-IN</a></p>
+    <p><strong>Email:</strong> rafaella.mramos000@gmail.com</p>
+    <p><strong>Telefone:</strong> (11) 94163-6542</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Rafaella de Magalhães Ramos. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
